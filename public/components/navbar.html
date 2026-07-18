@@ -1,0 +1,179 @@
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 py-3 colornav px-4 md:px-6 shadow-md bg-white dark:bg-zinc-900 dark:shadow-black transition-colors duration-300"
+>
+  <div class="flex flex-row justify-between items-center max-w-7xl mx-auto">
+    <div class="flex justify-center items-center">
+      <div class="flex flex-row items-center justify-center gap-2">
+        <div class="w-8 h-8">
+          <img
+            src="/assets/photo/coffee-cup.png"
+            alt="logo"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <div class="flex flex-row gap-1 text-xl mt-3 font-bold">
+          <h1 class="color1">GenZ</h1>
+          <h1 class="text-amber-600">Coffee</h1>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="hidden md:flex color1 flex-row justify-center items-center gap-6 lg:gap-7"
+    >
+      <a
+        href="/src/pages/home.html"
+        class="hover:text-amber-700 transition-colors"
+        >Home</a
+      >
+      <a
+        href="/src/pages/menu.html"
+        class="hover:text-amber-700 transition-colors"
+        >Menu</a
+      >
+      <a
+        href="/src/pages/reward.html"
+        class="hover:text-amber-700 transition-colors"
+        >Rewards</a
+      >
+      <a
+        href="/src/pages/about.html"
+        class="hover:text-amber-700 transition-colors"
+        >About Us</a
+      >
+      <a
+        href="/src/pages/contact.html"
+        class="hover:text-amber-700 transition-colors"
+        >Contact Us</a
+      >
+    </div>
+
+    <div
+      class="color1 flex flex-row justify-center items-center gap-3 md:gap-4"
+    >
+      <div class="relative">
+        <button
+          id="cartBtn"
+          type="button"
+          class="cart-icon flex flex-row items-center justify-center gap-1 cursor-pointer"
+        >
+          <i class="fa-solid fa-cart-arrow-down text-lg"></i>
+          <span id="cart-count" class="add color5 text-sm font-bold mt-2">0</span>
+        </button>
+
+        <div
+          id="cartMenu"
+          class="hidden absolute right-0 mt-3 w-80 max-w-[90vw] bg-white dark:bg-zinc-900 border dark:border-zinc-700 rounded-2xl shadow-lg overflow-hidden text-sm"
+        >
+          <div class="px-4 py-3 border-b dark:border-zinc-700 font-bold">
+            Your Order
+          </div>
+
+          <div id="cart-dropdown-items" class="max-h-72 overflow-y-auto divide-y dark:divide-zinc-700">
+            <!-- populated by cart.js -->
+          </div>
+
+          <div class="px-4 py-3 border-t dark:border-zinc-700 flex justify-between items-center font-semibold">
+            <span>Total</span>
+            <span id="cart-dropdown-total">$0.00</span>
+          </div>
+
+          <a
+            href="/src/pages/cart.html"
+            class="block text-center py-2 bg-amber-700 text-white hover:bg-amber-800 transition-colors"
+          >
+            View Cart
+          </a>
+        </div>
+      </div>
+
+      <!-- dark mode -->
+      <div>
+        <button
+          id="theme-toggle"
+          type="button"
+          class="border border-amber-500/30 dark:border-amber-400/30 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-amber-100 dark:hover:bg-zinc-800 transition-colors text-amber-600 dark:text-amber-400"
+        >
+          <i id="theme-toggle-dark-icon" class="fa-solid fa-moon"></i>
+          <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
+        </button>
+      </div>
+
+      <div id="profileUser" class="ml-2 md:ml-2 flex items-center gap-2">
+
+        <div id="login" class="border-2 rounded-2xl bg-amber-600 px-2">
+          <a href="/src/pages/login.html" class="text-white text-sm">Log In</a>
+        </div>
+
+        <div id="profileBox" class="hidden relative">
+          <button
+            id="profileBtn"
+            type="button"
+            class="flex items-center gap-2 cursor-pointer"
+          >
+            <img
+              id="profile"
+              src="/assets/photo/profile1.jpg"
+              class="w-8 h-8 rounded-full object-cover"
+              alt=""
+            />
+            <span id="nav-username" class="hidden sm:inline text-sm"></span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div
+            id="profileMenu"
+            class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-zinc-900 border dark:border-zinc-700 rounded-xl shadow-lg overflow-hidden"
+          >
+            <button
+              id="logoutBtn"
+              type="button"
+              class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 dark:hover:bg-zinc-800 cursor-pointer"
+            >
+              Log Out
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <button
+        id="menu-btn"
+        class="block md:hidden text-xl ml-2 focus:outline-none"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden flex-col items-center gap-4 pt-4 pb-2 border-t mt-3 color1"
+  >
+    <a
+      href="/src/pages/home.html"
+      class="hover:text-amber-700 transition-colors"
+      >Home</a
+    >
+    <a
+      href="/src/pages/menu.html"
+      class="hover:text-amber-700 transition-colors"
+      >Menu</a
+    >
+    <a
+      href="/src/pages/reward.html"
+      class="hover:text-amber-700 transition-colors"
+      >Rewards</a
+    >
+    <a
+      href="/src/pages/about.html"
+      class="hover:text-amber-700 transition-colors"
+      >About Us</a
+    >
+    <a
+      href="/src/pages/contact.html"
+      class="hover:text-amber-700 transition-colors"
+      >Contact Us</a
+    >
+  </div>
+</nav>

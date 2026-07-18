@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenZCoffee</title>
+    <link href="/src/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bgimage">
+        <!-- navbar -->
+        <div id="navbar"></div>
+        <!-- content -->
+        <main class="container mt-20 sm:mt-24 lg:mt-30">
+            <div class="mx-4 sm:ml-10 lg:ml-35">
+                <h1 class="color2 ml-2 sm:ml-5">LET'S VIBE</h1>
+                <h1 class="color5 text-4xl">Slide into our DMs or <br> send a message.</h1>
+                <p class="color2 mt-3">Whether it's a catering inquiry or just a quick "hello," we're here for the ritual of connection.
+                    <br>Let's make something happen.
+                </p>
+            </div>
+            <div class="gap-5 flex flex-col lg:flex-row justify-center items-stretch mt-5 text-white mx-4 sm:mx-8 lg:mx-0">
+                <div class="w-full max-w-[37.5rem] mx-auto lg:mx-0 blown p-5 sm:p-7 m-0 lg:m-5 rounded-4xl border-2 ">
+                    <div id="contact-success" class="hidden text-center mb-4 text-sm bg-green-600/80 rounded-2xl py-2 px-4">
+                        Thanks for reaching out! We'll get back to you within 24 hours.
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+                        <div class="flex flex-col justify-start items-start w-full">
+                            <label for="contact-name" class="ml-4">Name</label>
+                            <input id="contact-name" type="text" class="w-full border-2 rounded-3xl pl-3 focus:outline-none" placeholder="What should we call you?">
+                        </div>
+                        <div class="flex flex-col justify-start items-start w-full">
+                            <label for="contact-instagram" class="ml-4">instagram Handle</label>
+                            <input id="contact-instagram" type="text" class="w-full border-2 rounded-3xl pl-3 focus:outline-none" placeholder="@youhan">
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center my-5 ">
+                        <h1>What's on your mind?</h1>
+                        <div class="border-2 rounded-4xl w-full h-40 mt-2">
+                            <textarea id="contact-message" rows="5" placeholder="Share your thoughts, catering requests, or coffee dreams..." 
+                            class="w-full px-6 py-3  placeholder-gray-300 focus:outline-none  resize-none dark:placeholder:text-amber-700"
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5 text-center">
+                        <button id="contact-send" type="button" class="bg-amber-600 rounded-4xl py-3 px-6 cursor-pointer border-2 dark:bg-amber-500 dark:text-white">Send Message</button>
+                        <h1>We usually reply within 24 hours.</h1>
+                    </div>
+                </div>
+                <div class="color6 p-6 sm:p-10 mb-0 lg:mb-37 rounded-4xl w-full max-w-[37.5rem] mx-auto lg:mx-0 lg:w-auto">
+                    <h1 class="text-xl mb-3">Keep in touch</h1>
+                    <div>
+                        <div class="flex flex-row justify-between items-center gap-3 border-2 border-amber-700 rounded-4xl px-4 py-1 mb-5 cursor-pointer">
+                            <i class="fa-brands fa-instagram"></i>
+                            <div class="text-sm">
+                                <h1>Instagram</h1>
+                                <p>Daily aesthetic shots & news</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="flex flex-row justify-between items-center gap-3 border-2 border-amber-700 rounded-4xl px-4 py-1 cursor-pointer">
+                            <i class="fa-brands fa-tiktok"></i>
+                            <div class="text-sm">
+                                <h1>TikTok</h1>
+                                <p>Behind the scenes & recipes</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="text-center mt-10">
+                    <h1 class="text-3xl">Frequently Asked Questions</h1>
+                    <h6>Everything you need to know about the GenZ experince.<h6>
+                </div>
+                <div class="reveal grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5 mx-4 sm:mx-8 lg:mx-0">
+                    <div class="w-full h-auto sm:h-40 border-2 rounded-4xl p-4 m-0 sm:m-3">
+                        <h1 class="text-xl mb-2">How does mobile ordering work?</h1>
+                        <p class="text-sm">Simply download our app, select your store, and customize your drink. You can track your order in
+                            real-time and skip the line when you arrive.</p>
+                    </div>
+                    <div  class="w-full h-auto sm:h-40 border-2 rounded-4xl p-4 m-0 sm:m-3">
+                        <h1 class="text-xl mb-2">Do you offer catering for events?</h1>
+                        <p>Yes! We provide "Coffee Boxes" and pastry platters for office meetings, parties, and photo shoots.
+                            Message us for our current catering menu.</p>
+                    </div>
+                    <div class="w-full h-auto sm:h-40 border-2 rounded-4xl p-4 m-0 sm:m-3">
+                        <h1 class="text-xl mb-2">Can I earn rewards for gift cards?</h1>
+                        <p>Absolutely. Linking your gift card to your GenZ Coffee account ensures you earn points on every
+                            purchase, even when paying with credit</p>
+                    </div>
+                    <div class="w-full h-auto sm:h-40 border-2 rounded-4xl p-4 m-0 sm:m-3">
+                        <h1 class="text-xl mb-2">Are there vegan milk options?</h1>
+                        <p>We stock Oat, Almond, and Soy milk at no extra charge. We believe the perfect cup shouldn't have
+                            a surcharge for your lifestyle choices.</p>
+                    </div>
+                </div>
+           </div>
+           <div class="flex flex-col lg:flex-row justify-center items-stretch my-10 rounded-4xl mx-4 sm:mx-8 lg:mx-0">
+                <div class="blown p-6 sm:p-10 w-full lg:w-110 h-auto lg:h-100 text-white rounded-t-4xl lg:rounded-t-none lg:rounded-l-4xl">
+                    <div><h1 class="text-xl mb-5">Flagship Location</h1></div>
+                    <h1>Downtown Rituals</h1>
+                    <div class="flex flex-row justify-start items-center gap-3 mt-5">
+                        <i class="fa-solid fa-location-dot blown"></i>
+                        <h1>Street 656, Phum 6, Tuek Lak Ti Bei, Tuol Kouk, Phnom Penh</h1>
+                    </div>
+                    <div class="flex flex-row justify-start items-center gap-3 mt-5">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <h1>Mon-Fri 7:00 AM - 8:00 PM</h1>
+                            <h1>Sat-Sun 8:00 AM - 9:00 PM</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-start items-center gap-3 mt-5">
+                        <i class="fa-solid fa-phone"></i>
+                        <h1>(+855) 11416703</h1>
+                    </div>
+                    <div class="mt-10">
+                        <button class="border-2 rounded-4xl py-2 px-5 mr-4 color3 text-white">
+                            Get Directions
+                        </button>
+                        <button class="border-2 rounded-4xl py-2 px-5">
+                            View All Stores
+                        </button>
+                    </div>
+                </div>
+                <!-- Map -->
+                <div class="color6 w-full lg:w-110 h-auto lg:h-100 p-6 sm:p-10 flex justify-center items-center rounded-b-4xl lg:rounded-b-none lg:rounded-r-4xl">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1954.4841653957733!2d104.88985419464069!3d11.554128028296104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1skm!2skh!4v1783443262123!5m2!1skm!2skh"
+                    class="w-full h-64 sm:h-80 lg:w-90 lg:h-90 rounded-4xl" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+           </div>
+        </main>
+       <!-- footer -->
+        <div id="footer"></div>
+        <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

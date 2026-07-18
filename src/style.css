@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================
+   Design tokens — GenZ Coffee
+   Warm espresso, cream & clay. Fraunces (display) + Manrope (body).
+   ========================== */
+:root {
+  --cream: #f7efe1;
+  --cream-soft: #fbf6ec;
+  --espresso: #2c1c12;
+  --roast: #7a4522;
+  --roast-deep: #5c3216;
+  --clay: #c9702f;
+  --gold: #e0a94a;
+}
+
+.dark {
+  --bg-color: #1a120b;
+  --text-color: #f1e4d3;
+  --card-bg: #241811;
+  --btn-bg: var(--clay);
+  --btn-text: #1a120b;
+}
+.dark body {
+  background-color: var(--bg-color);
+}
+
+#theme-toggle i:last-child {
+  display: none;
+}
+.dark #theme-toggle i:first-child {
+  display: none;
+}
+.dark #theme-toggle i:last-child {
+  display: block;
+}
+.dark #footer {
+  background-color: #120c07;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fraunces", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.bgimage {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--cream);
+  color: var(--espresso);
+}
+.dark .bgimage {
+  color: var(--text-color);
+}
+
+.colornav {
+  background-color: var(--cream-soft);
+}
+.dark .colornav {
+  background: #211610;
+}
+
+.dark .blown {
+  background-color: var(--roast-deep);
+  color: var(--gold);
+}
+.dark .color6 {
+  background-color: var(--roast-deep);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.blown {
+  background-color: var(--roast);
+}
+.color5 {
+  color: var(--roast);
+}
+.dark .color5 {
+  color: var(--gold);
+}
+.color1 {
+  color: var(--espresso);
+}
+.dark .color1 {
+  color: var(--text-color);
+}
+.color2 {
+  color: var(--clay);
+}
+.color6 {
+  background-color: var(--clay);
+}
+.color3 {
+  background-color: #271310;
+}
+.color4 {
+  color: #ffdcc2;
+}
+
+/* ==========================
+   Signature: hand-poured divider
+   A slow espresso "pour" line — stands in for plain <hr> under section titles.
+   ========================== */
+.pour-rule {
+  position: relative;
+  width: 64px;
+  height: 3px;
+  margin: 10px auto;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--clay), var(--gold));
+}
+.pour-rule.pour-rule-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+.pour-rule::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  transform: translateX(-50%);
+}
+
+/* Product / content cards */
+.card1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  border: 1px solid rgba(122, 69, 34, 0.18);
+  padding: 12px;
+  border-radius: 20px;
+  background: var(--cream-soft);
+  box-shadow: 0 2px 10px rgba(44, 28, 18, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.dark .card1 {
+  background: var(--card-bg);
+  border-color: rgba(224, 169, 74, 0.16);
+}
+.card1:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -16px rgba(44, 28, 18, 0.3);
+  border-color: var(--clay);
+}
+.card1:hover .card1_image img {
+  transform: scale(1.06);
+}
+.card1_image {
+  position: relative;
+  width: 100%;
+  height: 32vh;
+  min-height: 160px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+.image1 {
+  width: 100%;
+  display: block;
+  height: 32vh;
+  min-height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.5s ease;
+}
+@media (max-width: 480px) {
+  .btnMenu {
+    width: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.star1 {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(251, 246, 236, 0.92);
+  color: var(--espresso);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.card1_price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 4px;
+  gap: 8px;
+}
+.card1_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+}
+.card1_button:focus {
+  outline: none;
+  background-color: var(--roast-deep);
+}
+.buttonAdd {
+  padding: 5px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.buttonAdd:hover {
+  color: var(--cream-soft);
+  transform: scale(1.05);
+}
+
+@keyframes floatAnimation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+.cafe-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 9999px;
+  padding: 6px 16px;
+  background-color: rgba(44, 28, 18, 0.55);
+  backdrop-filter: blur(4px);
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+.btnMenu {
+  width: 90px;
+  border: 1px solid transparent;
+  padding: 4px 6px;
+  background-color: var(--roast);
+  color: #ffffff;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 8px rgba(122, 69, 34, 0.35);
+}
+.btnMenu:hover {
+  background-color: var(--clay);
+  color: #ffffff;
+}
+.btnMenu:focus {
+  outline: none;
+  background-color: var(--cream-soft);
+  color: var(--roast);
+  border-color: var(--clay);
+}
+.btnMenu:active {
+  transform: scale(0.95);
+}
+.btnMenu.active-style {
+  background-color: var(--cream-soft);
+  color: var(--roast);
+}
+
+/* ==========================
+   Page Loader
+   ========================== */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream-soft);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.dark #page-loader {
+  background-color: var(--bg-color);
+}
+#page-loader.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.loader-spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 4px solid rgba(122, 69, 34, 0.2);
+  border-top-color: var(--roast);
+  animation: loader-spin 0.8s linear infinite;
+}
+@keyframes loader-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ==========================
+   Back to Top Button
+   ========================== */
+#back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 900;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--roast);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(44, 28, 18, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#back-to-top:hover {
+  background-color: var(--clay);
+}
+
+/* ==========================
+   Toast Notifications
+   ========================== */
+#toast-container {
+  position: fixed;
+  top: 84px;
+  right: 16px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: calc(100vw - 32px);
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--roast);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(44, 28, 18, 0.3);
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  max-width: 320px;
+}
+.toast.toast-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.toast.toast-hide {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+/* ==========================
+   Scroll Reveal
+   ========================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

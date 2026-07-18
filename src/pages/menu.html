@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenZCoffee</title>
+    <link href="/src/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bgimage">
+        <!-- navbar -->
+        <div id="navbar"></div>
+        <!-- content -->
+        <main class="my-20">
+            <div class="text-center">
+                <h6 class="color2">Sip Sustainability</h6>
+                <h1 class="text-5xl mb-5">Our Menu</h1>
+                <p>Every bean in our shop is ethically sourced from woman-owned cooperatives and roasted
+                    <br>in small batches to preserve its natural personality.From the volcanic soils of Ethiopia to our 
+                    <br>cozy bar, We brew with intention.
+                </p>
+            </div>
+            <!-- search button -->
+            <div class="flex justify-center items-center mt-5 px-4">
+                <div class="w-full max-w-md h-10 flex flex-row justify-start items-center gap-3 border-2 rounded-2xl  px-2 m-2">
+                    <i class="fa-solid fa-magnifying-glass ml-3"></i>
+                    <div class="w-full">
+                        <input id="search-product" type="text" placeholder="Search your blew..." 
+                        class="w-full  border-none outline-none focus:outline-none focus:ring-0">
+                    </div>
+                </div>  
+            </div>
+            <div class="flex flex-col justify-center items-center gap-20">
+                <div class="flex flex-wrap gap-2 justify-center my-4 px-4">
+                    <button
+                        class="btnMenu active-style"
+                        data-category="all">
+                        All
+                    </button>
+
+                    <button
+                        class="btnMenu"
+                        data-category="coffee">
+                        Coffee
+                    </button>
+
+                    <button
+                        class="btnMenu"
+                        data-category="tea">
+                        Tea
+                    </button>
+
+                    <button
+                        class="btnMenu"
+                        data-category="cold-brew">
+                        Cold Brew
+                    </button>
+
+                    <button
+                        class="btnMenu"
+                        data-category="snacks">
+                        Snacks
+                    </button>
+                </div>
+            </div>
+            <div class="mt-5 mx-auto p-2 sm:p-6 text-center">
+                <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 md:gap-15 mt-6 mx-2 sm:mx-8">
+                    <!-- product -->
+                    <div></div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <div id="footer"></div>
+        <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
