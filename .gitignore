@@ -22,7 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-package.json
 package-look.json
-vite.config.js
 node_modules
