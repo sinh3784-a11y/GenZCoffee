@@ -2,7 +2,7 @@
 
 A fully responsive **coffee shop business website**, built as the final project for the Web Design course. It's a static multi-page site (no backend/database) with a dynamic menu, working cart, sign up / login, dark mode, and scroll/loading animations — styled with Tailwind CSS and bundled with Vite.
 
-- **Live demo:** _add your Vercel URL here after deploying, e.g. `https://GenZCoffee.vercel.app`_
+- **Live demo:** _add your Vercel URL here after deploying, e.g. `https://genz-coffee.vercel.app/`_
 - **GitHub repo:** _add your repo URL here_
 
 ## Description
